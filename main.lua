@@ -29,7 +29,7 @@ local music_pack_meta = {
 		end
 	end,
 	unload_sample_data_func = function()
-		if not bankmanagerlib.bank_exists(musicdata.banks.musicbank.bank_path) then
+		if bankmanagerlib.bank_exists(musicdata.banks.musicbank.bank_path) then
 			bankmanagerlib.unload_bank_sample_data(musicdata.banks.musicbank.bank_path)
 		end
 	end,
